@@ -2,9 +2,10 @@
 # read a number from a text file
 readNumber = () ->
   $.get 'http://www.explo.org/takeanumber/number.php', (result) ->
+    new_number = result.trim()
     old_number = $('#number').html().trim()
-    $('#number').html result
-    $('#number').effect("highlight", {color:"#F68825"}, 1000) if old_number != result
+    $('#number').html new_number
+    $('#number').effect("highlight", {color:"#F68825"}, 1000) if old_number != new_number
 
 window.readNumber = readNumber #make it global
 do readNumber #run it once
