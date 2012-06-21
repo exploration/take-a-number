@@ -1,0 +1,52 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 900;
+}
+
+#top, #bottom {
+  height: 40%;
+  line-height: 125px;
+  margin: auto;
+  max-width: 320px;
+}
+
+#top {
+  margin-top: 25px;
+}
+
+#number {
+  border-radius: 20px;
+  font-size: 72px;
+  font-weight: 900;
+  margin: auto;
+  width: 50%;
+}
+
+#advance, #reset {
+  border-radius: 20px;
+  float: left;
+  height: 100%;
+  margin: 2.5%;
+  width: 45%;
+}
+
+#advance {
+  background: #E7F2D4;
+}
+
+#reset {
+  background: #DDD;
+}
