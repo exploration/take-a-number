@@ -5,6 +5,7 @@ $data_dir = "assets/data";
 #barf if no filename passed
 if ($filename == null) { 
   header("HTTP/1.0 400 Bad Request"); 
+  exit;
 } else {
   $filename .= ".txt";
 }
@@ -15,9 +16,12 @@ system("/bin/test -e $data_dir/$filename || echo 0 > $data_dir/$filename");
 #read file
 $number = file_get_contents("$data_dir/$filename");
 
-if ($_GET['reset'] == 1) {
+if (isset($_GET['reset'])) { $reset = $_GET['reset']; } else { $reset = false; }
+if (isset($_GET['increment'])) { $increment = $_GET['increment']; } else { $increment = false; }
+
+if ($reset == 1) {
   $new_number = 1;
-} else if ($_GET['increment'] == 1) {
+} else if ($increment == 1) {
   $new_number = $number + 1;
 } else {
   $new_number = $number;

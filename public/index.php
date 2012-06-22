@@ -28,7 +28,9 @@ if ($resource_id == null) {
     <div id="reset">RESET</div>
   </div>
   <div id="resource-id" data-resource-id="<?php print $resource_id; ?>">
-    Your counter is named: <?php print $resource_id; ?>
+    Share this counter:
+    <br> 
+    <?php print "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>
   </div>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script src="assets/scripts/jquery-ui-1.8.21.custom.min.js"></script>
