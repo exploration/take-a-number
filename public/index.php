@@ -35,7 +35,7 @@ if (isset($_GET['resourceid'])) {
       <?php print $share_url; ?>
     </a>
   </div>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="assets/scripts/jquery-1.7.2.min.js"></script>
   <script src="assets/scripts/jquery-ui-1.8.21.custom.min.js"></script>
   <script src="assets/scripts/takeanumber.js"></script>
 </body>
