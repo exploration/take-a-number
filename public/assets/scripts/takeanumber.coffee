@@ -1,6 +1,6 @@
 # Page parameters
 resource_id = $('#resource-id').data('resource-id')
-number_url = "#{location.origin}#{location.pathname.split(resource_id)[0]}number.php"
+number_url = "#{location.protocol}//#{location.host}#{location.pathname.split(resource_id)[0]}number.php"
 
 # Effects parameters
 hl_color = "#F68825"
@@ -13,7 +13,7 @@ readNumber = () ->
     new_number = result.trim()
     old_number = $('#number').html().trim()
     $('#number').html new_number
-    $('#number').effect("highlight", {color:hl_color}, hl_soeed) if old_number != new_number
+    $('#number').effect("highlight", {color:hl_color}, hl_speed) if old_number != new_number
 
 window.readNumber = readNumber #make it global
 do readNumber #run it once

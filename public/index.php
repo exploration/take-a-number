@@ -17,7 +17,6 @@ if ($resource_id == null) {
   <meta name="keywords" content="RMV, Number, Counter">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
-  <link href='http://fonts.googleapis.com/css?family=Lato:100italic,400,900' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <div id="top">
@@ -30,7 +29,10 @@ if ($resource_id == null) {
   <div id="resource-id" data-resource-id="<?php print $resource_id; ?>">
     Share this counter:
     <br> 
-    <?php print "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>
+    <?php $share_url = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>
+    <a href="<?php print $share_url; ?>" target="_blank">
+      <?php print $share_url; ?>
+    </a>
   </div>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script src="assets/scripts/jquery-ui-1.8.21.custom.min.js"></script>

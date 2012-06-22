@@ -3,7 +3,7 @@
 
   resource_id = $('#resource-id').data('resource-id');
 
-  number_url = "" + location.origin + (location.pathname.split(resource_id)[0]) + "number.php";
+  number_url = "" + location.protocol + "//" + location.host + (location.pathname.split(resource_id)[0]) + "number.php";
 
   hl_color = "#F68825";
 
@@ -18,7 +18,7 @@
       if (old_number !== new_number) {
         return $('#number').effect("highlight", {
           color: hl_color
-        }, hl_soeed);
+        }, hl_speed);
       }
     });
   };

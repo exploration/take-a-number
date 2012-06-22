@@ -5,17 +5,22 @@ html, body {
   margin: 0; }
 
 body {
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
+  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-weight: normal;
   font-size: 24px;
   text-align: center; }
 
 h1 {
-  font-weight: 900; }
+  font-weight: bolder; }
+
+a {
+  color: #f68825; }
+  a:visited {
+    color: #f68825; }
 
 #top, #bottom {
   height: 40%;
-  line-height: 125px;
+  line-height: 100px;
   margin: auto;
   max-width: 320px; }
 
@@ -25,8 +30,10 @@ h1 {
 #number {
   border-radius: 20px;
   font-size: 72px;
-  font-weight: 900;
+  font-weight: bolder;
+  line-height: 100px;
   margin: auto;
+  min-height: 100px;
   width: 50%; }
 
 #advance, #reset {
@@ -37,14 +44,15 @@ h1 {
   width: 45%; }
 
 #advance {
-  background: #E7F2D4; }
+  background: #e7f2d4; }
 
 #reset {
-  background: #DDD; }
+  background: #f3efea; }
 
 #resource-id {
-  font-size: 12pt;
-  font-weight: 100;
+  color: #8c857c;
+  font-size: 10pt;
+  font-weight: lighter;
   font-style: oblique;
   margin: 10px auto auto auto;
   width: 320px; }
