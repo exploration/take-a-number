@@ -30,6 +30,7 @@
   setInterval(readNumber, 5000);
 
   incrementNumber = function() {
+    console.log("" + number_url + "?resourceid=" + resource_id + "&increment=1");
     return $.get("" + number_url + "?resourceid=" + resource_id + "&increment=1", function(result) {
       $('#number').html(result);
       return $('#number').effect("highlight", {

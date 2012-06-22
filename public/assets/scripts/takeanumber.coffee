@@ -23,6 +23,7 @@ setInterval(readNumber, 5000) #set it on a loop
 
 # Functions to set the number
 incrementNumber = () ->
+  console.log "#{number_url}?resourceid=#{resource_id}&increment=1"
   $.get "#{number_url}?resourceid=#{resource_id}&increment=1", (result) ->
     $('#number').html result
     $('#number').effect "highlight", {color:hl_color}, hl_speed

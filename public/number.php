@@ -1,17 +1,21 @@
 <?php
-$filename = preg_replace('/[^-a-zA-Z0-9_]/', '', $_GET['resourceid']);
+
 $data_dir = "assets/data";
 
-#barf if no filename passed
-if ($filename == null) { 
+if (isset($_GET['resourceid'])) {
+  $filename = preg_replace('/[^-a-zA-Z0-9_]/', '', $_GET['resourceid']) . ".txt";
+} else {
+  #barf if no filename passed
   header("HTTP/1.0 400 Bad Request"); 
   exit;
-} else {
-  $filename .= ".txt";
 }
 
 #create the file if necessary
-system("/bin/test -e $data_dir/$filename || echo 0 > $data_dir/$filename");
+if (!file_exists("$data_dir/$filename")) {
+  $fp = fopen("$data_dir/$filename", 'w');
+  fwrite($fp, 0);
+  fclose($fp);
+}
 
 #read file
 $number = file_get_contents("$data_dir/$filename");
@@ -29,7 +33,7 @@ if ($reset == 1) {
 
 #write new number
 $fp = fopen("$data_dir/$filename", 'w');
-fwrite($fp, $new_number);
+$result = fwrite($fp, $new_number);
 fclose($fp);
 
 header('Content-type: text/plain');

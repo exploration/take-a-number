@@ -1,7 +1,8 @@
 <?php
 
-$resource_id = $_GET['resourceid'];
-if ($resource_id == null) { 
+if (isset($_GET['resourceid'])) { 
+  $resource_id = $_GET['resourceid'];
+} else { 
   $resource_id = time();
   header("Location: $resource_id");
 }
