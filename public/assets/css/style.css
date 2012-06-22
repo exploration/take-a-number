@@ -1,8 +1,9 @@
 html, body {
+  font-color: #494540;
   height: 100%;
-  width: 100%;
+  margin: 0;
   padding: 0;
-  margin: 0; }
+  width: 100%; }
 
 body {
   font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
@@ -29,7 +30,7 @@ a {
 
 #number {
   border-radius: 20px;
-  font-size: 72px;
+  font-size: 48px;
   font-weight: bolder;
   line-height: 100px;
   margin: auto;
@@ -37,8 +38,12 @@ a {
   width: 50%; }
 
 #advance, #reset {
+  border-color: #c8c4c0;
   border-radius: 20px;
+  border-width: thin;
+  cursor: pointer;
   float: left;
+  font-size: 24px;
   height: 100%;
   margin: 2.5%;
   width: 45%; }

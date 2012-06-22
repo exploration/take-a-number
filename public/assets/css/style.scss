@@ -1,4 +1,5 @@
-$font-color-light: #494540;
+$font-color: #494540;
+$font-size: 24px;
 $green-bg: #E7F2D4;
 $orange: #F68825;
 $orange-bg: #F3EFEA;
@@ -6,16 +7,17 @@ $page-width: 320px;
 
 
 html, body {
+  font-color: $font-color;
   height: 100%;
-  width: 100%;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 body {
   font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
   font-weight: normal;
-  font-size: 24px;
+  font-size: $font-size;
   text-align: center;
 }
 
@@ -44,7 +46,7 @@ a {
 
 #number {
   border-radius: 20px;
-  font-size: 72px;
+  font-size: 2 * $font-size;
   font-weight: bolder;
   line-height: 100px;
   margin: auto;
@@ -53,8 +55,12 @@ a {
 }
 
 #advance, #reset {
+  border-color: lighten($font-color, 50%);
   border-radius: 20px;
+  border-width: thin;
+  cursor: pointer;
   float: left;
+  font-size: $font-size;
   height: 100%;
   margin: 2.5%;
   width: 45%;
@@ -69,7 +75,7 @@ a {
 }
 
 #resource-id {
-  color: lighten($font-color-light, 25%);
+  color: lighten($font-color, 25%);
   font-size: 10pt;
   font-weight: lighter;
   font-style: oblique;

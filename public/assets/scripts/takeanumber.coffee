@@ -4,7 +4,7 @@ number_url = "#{location.protocol}//#{location.host}#{location.pathname.split(re
 
 # Effects parameters
 hl_color = "#F68825"
-hl_speed = 500
+hl_speed = 250
 
 # Functions to get the number
 # read a number from a text file

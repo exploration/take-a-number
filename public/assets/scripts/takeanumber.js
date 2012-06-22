@@ -7,7 +7,7 @@
 
   hl_color = "#F68825";
 
-  hl_speed = 500;
+  hl_speed = 250;
 
   readNumber = function() {
     return $.get("" + number_url + "?resourceid=" + resource_id, function(result) {

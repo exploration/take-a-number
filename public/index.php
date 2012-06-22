@@ -24,8 +24,8 @@ if (isset($_GET['resourceid'])) {
     <div id="number"></div>
   </div>
   <div id="bottom">
-    <div id="advance">ADVANCE</div>
-    <div id="reset">RESET</div>
+    <button id="advance">ADVANCE</button>
+    <button id="reset">RESET</button>
   </div>
   <div id="resource-id" data-resource-id="<?php print $resource_id; ?>">
     Share this counter:
