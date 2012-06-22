@@ -1,1 +1,5 @@
-DirectoryIndex index.html
+DirectoryIndex index.php
+Options +FollowSymlinks
+
+RewriteEngine on
+RewriteRule ^([0-9a-z_-]+)$ index.php?resourceid=$1

@@ -41,3 +41,10 @@ h1 {
 
 #reset {
   background: #DDD; }
+
+#resource-id {
+  font-size: 12pt;
+  font-weight: 100;
+  font-style: oblique;
+  margin: 10px auto auto auto;
+  width: 320px; }

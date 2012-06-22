@@ -1,3 +1,12 @@
+<?php
+
+$resource_id = $_GET['resourceid'];
+if ($resource_id == null) { 
+  $resource_id = time();
+  header("Location: $resource_id");
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +17,7 @@
   <meta name="keywords" content="RMV, Number, Counter">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
-  <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:100italic,400,900' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <div id="top">
@@ -17,6 +26,9 @@
   <div id="bottom">
     <div id="advance">ADVANCE</div>
     <div id="reset">RESET</div>
+  </div>
+  <div id="resource-id" data-resource-id="<?php print $resource_id; ?>">
+    Your counter is named: <?php print $resource_id; ?>
   </div>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script src="assets/scripts/jquery-ui-1.8.21.custom.min.js"></script>
