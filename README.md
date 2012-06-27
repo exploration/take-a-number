@@ -21,9 +21,11 @@ The way we use it is as follows:
 Notes
 -----
 
-- We're using Jquery AJAX calls to mimic server pushes to the client. The client page just checks the server to make sure that its number is correct. If it's not, it updates.
+- I'm using Jquery AJAX calls to mimic server pushes to the client. The client page just checks the server to make sure that its number is correct. If it's not, it updates.
 - Counters are stored as plain text files on the filesystem. A database could be used, but seemed like overkill for such a simple application. If you want to set this up, your webserver will need read/write access to the `assets/data` directory.
 - You might want to schedule a job to clear out the data directory periodically, lest it get crufty.
+- I used [SCSS](sass-lang.com) and [CoffeeScript](http://jashkenas.github.com/coffee-script/) on this project (and you should too!).
+- I made some special [Rake](http://rake.rubyforge.org/) tasks for watching/compiling the SCSS and CoffeeScript into CSS and JavaScript. Type `rake -T` at the command line to see what's available.
 
 
 License
